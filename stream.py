@@ -11,12 +11,12 @@ import cv2
 import threading
 
 class Video:
-    def __init__(self, video_src):
+    def __init__(self, video_src, width, height, fps):
 
         self.stream = cv2.VideoCapture(video_src)
-        self.stream.set(3, 640)
-        self.stream.set(4, 480)
-        self.stream.set(5, 20)
+        self.stream.set(3, width)
+        self.stream.set(4, height)
+        self.stream.set(5, fps)
         (self.grabbed, self.frame) = self.stream.read()
         self.stopped = False
         self.count = 0

@@ -1,0 +1,21 @@
+
+
+[V4L2]
+virtualDeviceID = /dev/video10
+
+[stream]
+height = 480
+width = 640
+channel = 3
+fps = 20
+CameraID = 2
+
+[model]
+path = models/lite-model_deeplabv3_1_metadata_2.tflite
+
+[background]
+blur = yes
+blur_intensity = 11
+image = images/workspace.jpg
+
+
