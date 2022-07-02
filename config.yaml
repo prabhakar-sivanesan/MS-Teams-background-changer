@@ -1,9 +1,11 @@
 
 
 [V4L2]
-virtualDeviceID = /dev/video10
+# add virtual camera device ID
+virtualDeviceID = /dev/video20
 
 [stream]
+# stream image dimensions
 height = 480
 width = 640
 channel = 3
@@ -11,9 +13,12 @@ fps = 20
 CameraID = 2
 
 [model]
+# AI model path
 path = models/lite-model_deeplabv3_1_metadata_2.tflite
 
 [background]
+# if blur = yes, only background will be blurred, background image is not added
+# if blur = no, custom background image is added, blur effect is not applied
 blur = yes
 blur_intensity = 11
 image = images/workspace.jpg
