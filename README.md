@@ -66,6 +66,14 @@ Edit configuration data in ```config.yaml``` file.
 virtualDeviceID = /dev/video20 
 ```
 
+Edit the input cameraID from which the realtime video stream should be fetched. Just input the int device ID alone like 2 for ```/dev/video2``` and 0 for ```/dev/video0```
+
+```
+[stream]
+# change input camera device ID (just add the ID number alone)
+CameraID = 2
+```
+
 edit the background settings in the configuration file.
 
 ```
@@ -76,3 +84,9 @@ blur = yes
 blur_intensity = 11
 image = images/workspace.jpg
 ```
+
+### 4.Run application
+
+Now we are ready to run the application,
+
+    python3 
