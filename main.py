@@ -25,7 +25,7 @@ try:
     model_path = config['model']['path']
     
     # input physical camera configuration
-    input_cam_id = int(config['stream']['CameraID'])
+    input_cam_id = int(config['stream']['cameraID'])
     input_fps = int(config['stream']['fps'])
     height = int(config['stream']['height'])
     width  = int(config['stream']['width'])
