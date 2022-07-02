@@ -27,9 +27,11 @@ and this should output something like ``` video20 ```.
 
 ### Verify Virtual camera 
 
-Debug the list of physical and virtual camera using 
+Debug the list of physical and virtual camera using the command
 
     v4l2-ctl --list-devices
+
+And that will pop out information about all the integrated, physical(usb) and virtual camera along will associated device ID connected to the PC.
 
 ``` 
 Virtual Camera 1 (platform:v4l2loopback-000):
@@ -41,6 +43,5 @@ Lenovo FHD Webcam Audio: Lenovo (usb-0000:00:14.0-4):
 
 Integrated Camera: Integrated C (usb-0000:00:14.0-7):
 	/dev/video0
-	/dev/video1 
-
+	/dev/video1
 ```
