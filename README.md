@@ -4,7 +4,7 @@ Microsoft Teams on linux operating system does not have background effects like 
 
 We have used AI based Image segmentation model [DeepLab-V3](https://ai.googleblog.com/2018/03/semantic-image-segmentation-with.html) to segment person as foreground and the rest of the objects as a background and apply filters to it.
 
-![architecture](archi.png)
+![architecture](architecture.png)
 
 
 ## Installation
