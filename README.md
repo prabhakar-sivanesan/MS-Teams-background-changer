@@ -13,17 +13,17 @@ We have used AI based Image segmentation model [DeepLab-V3](https://ai.googleblo
 
 [v4l2loopback](https://github.com/umlaeute/v4l2loopback) module is used to create **virtual video devices**. Therefore, all v4l2 applications will read the newly created virtual video device as a physical video device. This allows us to push modified video stream to the virtual camera and use it as a normal video feed coming from physical camera device.  
 
-### Requirements
+### Install requirements
 
 -   Python 3.x
-
-### Install requirements.txt
 
 Install python dependencies using
 
     pip3 install -r requirements.txt
 
-### Create Virtual Camera
+## Usage
+
+### 1.Create Virtual Camera
 
     sudo modprobe v4l2loopback video_nr=20 card_name="Virtual Camera 1" exclusive_caps=1
 
@@ -35,7 +35,7 @@ You can verify that by running
     ls -1 /sys/devices/virtual/video4linux
 and this should output something like ``` video20 ```.  
 
-### Verify Virtual camera 
+### 2.Verify Virtual camera 
 
 Debug the list of physical and virtual camera using the command
 
@@ -54,4 +54,25 @@ Lenovo FHD Webcam Audio: Lenovo (usb-0000:00:14.0-4):
 Integrated Camera: Integrated C (usb-0000:00:14.0-7):
 	/dev/video0
 	/dev/video1
+```
+
+### 3.Update Config file
+
+Edit configuration data in ```config.yaml``` file.
+
+```
+[V4L2]
+# add virtual camera device ID
+virtualDeviceID = /dev/video20 
+```
+
+edit the background settings in the configuration file.
+
+```
+[background]
+# if blur = yes, only background will be blurred, background image is not added
+# if blur = no, custom background image is added, blur effect is not applied
+blur = yes
+blur_intensity = 11
+image = images/workspace.jpg
 ```
