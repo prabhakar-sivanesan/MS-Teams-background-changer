@@ -7,11 +7,21 @@ We have used AI based Image segmentation model [DeepLab-V3](https://ai.googleblo
 
 ## Installation
 
-### Install v4l2loopback and create virtual camera
+### Install dependencies
 
     sudo apt-get install v4l2loopback-dkms v4l-utils
 
 [v4l2loopback](https://github.com/umlaeute/v4l2loopback) module is used to create **virtual video devices**. Therefore, all v4l2 applications will read the newly created virtual video device as a physical video device. This allows us to push modified video stream to the virtual camera and use it as a normal video feed coming from physical camera device.  
+
+### Requirements
+
+-   Python 3.x
+
+### Install requirements.txt
+
+Install python dependencies using
+
+    pip3 install -r requirements.txt
 
 ### Create Virtual Camera
 
