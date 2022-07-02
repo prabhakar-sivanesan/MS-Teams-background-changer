@@ -25,11 +25,14 @@ You can verify that by running
     ls -1 /sys/devices/virtual/video4linux
 and this should output something like ``` video20 ```.  
 
+### Verify Virtual camera 
+
 Debug the list of physical and virtual camera using 
 
     v4l2-ctl --list-devices
 
-``` Virtual Camera 1 (platform:v4l2loopback-000):
+``` 
+Virtual Camera 1 (platform:v4l2loopback-000):
 	/dev/video20
 
 Lenovo FHD Webcam Audio: Lenovo (usb-0000:00:14.0-4):
@@ -38,4 +41,6 @@ Lenovo FHD Webcam Audio: Lenovo (usb-0000:00:14.0-4):
 
 Integrated Camera: Integrated C (usb-0000:00:14.0-7):
 	/dev/video0
-	/dev/video1 ```
+	/dev/video1 
+
+```
