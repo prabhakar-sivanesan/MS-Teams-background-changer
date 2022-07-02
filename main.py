@@ -25,7 +25,7 @@ try:
     model_path = config['model']['path']
     
     # input physical camera configuration
-    input_cam_id = int(config['stream']['cameraID'])
+    input_cam_id = int(config['stream']['cameraID'].split("/dev/video")[-1])
     input_fps = int(config['stream']['fps'])
     height = int(config['stream']['height'])
     width  = int(config['stream']['width'])
@@ -109,6 +109,6 @@ while True:
       print("Processing frame: {0} at{1:3d} fps. Press ctrl+q to stop".format(count,int(1/(time.time() - start_time))))
   except KeyboardInterrupt:
     cap.stop()
-    cv2.destroyAllWindows()
+    #cv2.destroyAllWindows()
     device.close()
     break
