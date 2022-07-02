@@ -66,12 +66,12 @@ Edit configuration data in ```config.yaml``` file.
 virtualDeviceID = /dev/video20 
 ```
 
-Edit the input cameraID from which the realtime video stream should be fetched. Just input the int device ID alone like 2 for ```/dev/video2``` and 0 for ```/dev/video0```
+Edit the input cameraID from which the realtime video stream should be fetched.
 
 ```
 [stream]
-# change input camera device ID (just add the ID number alone)
-CameraID = 2
+# change input camera device ID 
+CameraID = /dev/video2
 ```
 
 edit the background settings in the configuration file.
@@ -80,6 +80,7 @@ edit the background settings in the configuration file.
 [background]
 # if blur = yes, only background will be blurred, background image is not added
 # if blur = no, custom background image is added, blur effect is not applied
+# blur_intensity should always be an odd number
 blur = yes
 blur_intensity = 11
 image = images/workspace.jpg
@@ -89,4 +90,6 @@ image = images/workspace.jpg
 
 Now we are ready to run the application,
 
-    python3 
+    python3 main.py
+
+This should start to read the video feed from the input video camera, apply effects and push it to the Virtual camera. You can press ```ctrl+q``` to stop the application.
