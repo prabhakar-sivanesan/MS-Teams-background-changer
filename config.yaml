@@ -21,6 +21,7 @@ path = models/lite-model_deeplabv3_1_metadata_2.tflite
 [background]
 # if blur = yes, only background will be blurred, background image is not added
 # if blur = no, custom background image is added, blur effect is not applied
+# blur_intensity should always be an odd number
 blur = yes
 blur_intensity = 11
 image = images/workspace.jpg
