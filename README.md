@@ -56,7 +56,7 @@ Integrated Camera: Integrated C (usb-0000:00:14.0-7):
 	/dev/video1
 ```
 
-### 3.Update Config file
+### 3.Update Configurations
 
 Edit configuration data in ```config.yaml``` file.
 
