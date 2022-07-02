@@ -33,7 +33,7 @@ try:
     
     # background config data
     enable_blur = config['background'].getboolean('blur')
-    background = config['background']['image']
+    background = config['background']['bg_image']
     intensity = int(config['background']['blur_intensity'])
     background = cv2.imread(background)
     background = cv2.resize(background, (width,height))
