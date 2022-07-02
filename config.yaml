@@ -2,7 +2,7 @@
 
 [V4L2]
 # add virtual camera device ID
-virtualDeviceID = /dev/video10
+virtualDeviceID = /dev/video20
 
 [stream]
 # stream image dimensions
@@ -12,7 +12,7 @@ width = 640
 channel = 3
 fps = 20
 # change input camera device ID (just add the ID number alone)
-cameraID = 0
+cameraID = 2
 
 [model]
 # AI model path
