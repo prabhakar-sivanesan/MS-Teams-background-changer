@@ -6,6 +6,7 @@ virtualDeviceID = /dev/video20
 
 [stream]
 # stream image dimensions
+# recommended to keep the same camera properties for better performance.
 height = 480
 width = 640
 channel = 3
