@@ -18,9 +18,24 @@ We have used AI based Image segmentation model [DeepLab-V3](https://ai.googleblo
     sudo modprobe v4l2loopback video_nr=20 card_name="Virtual Camera 1" exclusive_caps=1
 
 
-This will create a virtual camera with a device 20 (if it's taken, change to different ID. Recommended to give higher number therefore there won't me clash) and name **Virtual Camera 1**
+This will create a virtual camera with a device 20 (if it's taken, change to different ID. Recommended to give higher number therefore there won't me clash) and with a name **Virtual Camera 1**
 
 You can verify that by running
 
     ls -1 /sys/devices/virtual/video4linux
-and this should output something like ``` video20 ```.
+and this should output something like ``` video20 ```.  
+
+Debug the list of physical and virtual camera using 
+
+    v4l2-ctl --list-devices
+
+``` Virtual Camera 1 (platform:v4l2loopback-000):
+	/dev/video20
+
+Lenovo FHD Webcam Audio: Lenovo (usb-0000:00:14.0-4):
+	/dev/video2
+	/dev/video3
+
+Integrated Camera: Integrated C (usb-0000:00:14.0-7):
+	/dev/video0
+	/dev/video1 ```
