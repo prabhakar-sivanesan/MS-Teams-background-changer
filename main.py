@@ -31,7 +31,7 @@ try:
     width  = int(config['stream']['width'])
     channels = int(config['stream']['channel'])
     
-    # background config data
+    # background configuration data
     enable_blur = config['background'].getboolean('blur')
     background = config['background']['bg_image']
     intensity = int(config['background']['blur_intensity'])
