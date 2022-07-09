@@ -94,4 +94,4 @@ Now we are ready to run the application,
 
     python3 main.py
 
-This should start to read the video feed from the input video camera, apply effects and push it to the Virtual camera. You can press ```ctrl+q``` to stop the application.
+This should start to read the video feed from the input video camera, apply effects and push it to the Virtual camera. You can press ```ctrl+c``` to stop the application.

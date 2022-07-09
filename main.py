@@ -106,7 +106,7 @@ while True:
       mask_image = cv2.cvtColor(mask_image, cv2.COLOR_BGR2YUV_I420)
       device.write(mask_image)
       
-      print("Processing frame: {0} at{1:3d} fps. Press ctrl+q to stop".format(count,int(1/(time.time() - start_time))))
+      print("Processing frame: {0} at{1:3d} fps. Press ctrl+c to stop".format(count,int(1/(time.time() - start_time))))
   except KeyboardInterrupt:
     cap.stop()
     #cv2.destroyAllWindows()
