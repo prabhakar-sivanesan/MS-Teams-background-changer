@@ -27,7 +27,7 @@ Install python dependencies using
 
 ### 1.Create Virtual Camera
 
-    sudo modprobe v4l2loopback video_nr=20 card_name="Virtual Camera 1" exclusive_caps=1
+    sudo modprobe v4l2loopback video_nr=20 card_name="Virtual Camera 1"
 
 
 This will create a virtual camera with a device ID 20 and with a name **Virtual Camera 1**. If it's taken, change to different ID. Recommended to give higher number therefore there won't be a clash with other devices.
