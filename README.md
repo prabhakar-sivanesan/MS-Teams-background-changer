@@ -32,6 +32,12 @@ Install python dependencies using
 
 This will create a virtual camera with a device ID 20 and with a name **Virtual Camera 1**. If it's taken, change to different ID. Recommended to give higher number therefore there won't be a clash with other devices.
 
+If you get this error 
+
+```modprobe: ERROR: could not insert 'v4l2loopback': Operation not permitted```
+
+Try disablling "Secure Boot" option in BIOS settings. And if still doesn't work try installing ```v4l2loopback``` from source. Refer [here](https://github.com/prabhakar-sivanesan/MS-Teams-background-changer/issues/1#issue-1295877670) for step by step process.
+
 You can verify that by running
 
     ls -1 /sys/devices/virtual/video4linux
